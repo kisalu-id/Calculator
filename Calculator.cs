@@ -8,7 +8,7 @@ namespace Rechner
 	{
 		static void Main(string[]args)
 		{
-		    try 
+		    try
 		    {
 		        Regex validateNumberRegex = new Regex("^\\d+$");
 		        
@@ -21,11 +21,11 @@ namespace Rechner
                     (!validateNumberRegex.IsMatch(x1)) 
                     || (!validateNumberRegex.IsMatch(x2))
                  ) {
-                    Console.WriteLine("Error");
+                   // Console.WriteLine("Error");
                 }
                 
-                int _x1 = int.Parse(x1); 
-                int _x2 = int.Parse(x2);
+                double _x1 = double.Parse(x1); 
+                double _x2 = double.Parse(x2);
                     
                 Console.WriteLine("Enter operator and press Enter:");
                 string opt = Console.ReadLine();
@@ -47,7 +47,7 @@ namespace Rechner
                     case "/":
                     if (_x2==0)
                     {
-                        Console.WriteLine("Teilen durch 0 nicht möglich");
+                        Console.WriteLine("Dividing on 0 is not possible");
                     }
                     else
                     {
@@ -60,7 +60,7 @@ namespace Rechner
                 }
 		    } catch
                 {
-                Console.WriteLine("Es gab einen Error...");
+                Console.WriteLine("There's an error...");
                 }
 		}
 	}
